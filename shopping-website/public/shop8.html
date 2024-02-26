@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增塑膠棧板商品</title>
+    <style>
+        /* 使用 Flexbox 布局，每行显示四个商品 */
+        #productList {
+            display: flex;
+            flex-wrap: wrap; /* 允许商品列表换行 */
+            justify-content: flex-start; /* 从左到右对齐 */
+            gap: 20px; /* 商品之间的间距 */
+        }
+    
+        /* 设置商品项的宽度为 23% */
+        .product-item {
+            width: 23%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc; /* 设置边框 */
+            padding: 10px; /* 设置内边距 */
+            box-sizing: border-box; /* 盒子模型设置为边框盒子 */
+        }
+    
+        /* 设置商品图片大小相同 */
+        .product-item img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 200px;
+        }
+        #productPrice{
+            width:50vw;
+        }
+        #productStyle{
+            width:50vw
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>新增塑膠棧板商品</h1>
+    <form id="addProductForm" action="/add-product/shop8" method="POST" enctype="multipart/form-data">
+        <label for="productName">商品名稱：</label>
+        <input type="text" id="productName" name="name"><br><br>
+        <label for="productPrice">規格：</label>
+        <input type="text" id="productPrice" name="price"><br><br>
+        <label for="productStyle">用途/特性：</label>
+        <input type="text" id="productStyle" name="style"><br><br>
+        <label for="productImage">上傳圖片：</label>
+        <input type="file" id="productImage" name="image"><br><br>
+        <button type="submit">新增商品</button>
+    </form>
+    <br>
+    <br>
+    <a href="index.html">前往首頁</a>
+    <br>
+    <a href="select.html">繼續管理商品</a>
+    <h2>商品列表</h2>
+    <div id="productList">
+        <!-- 商品列表及刪除按鈕將被插入這裡 -->
+    </div>
+    
+    <script>
+        // 獲取商品列表
+        function fetchProductList() {
+            fetch('/api/products/shop8')
+                .then(response => response.json())
+                .then(data => {
+                    var productList = document.getElementById("productList");
+                    productList.innerHTML = ""; // 清空商品列表
+                    data.forEach(product => {
+                        var productItem = document.createElement("div");
+                        productItem.classList.add("product-item"); // 添加 class
+                        productItem.innerHTML = `
+                            <p>商品名稱：${product.name}</p>
+                            <p>規格：${product.price}</p>
+                            <p>用途/特性：${product.style}</p>
+                            <img src="../uploads/${product.image}" alt="${product.name}">
+                            <button onclick="deleteProduct('${product.id}', 'shop8')">刪除</button>
+                        `;
+                        productList.appendChild(productItem);
+                    });
+                })
+                .catch(error => console.error('錯誤:', error));
+        }
+        
+        // 初始化時獲取並顯示商品列表
+        fetchProductList();
+
+        // 刪除商品
+        function deleteProduct(id, page) {
+        fetch(`/delete-product/${page}/${id}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (response.ok) {
+                fetchProductList(); // 刪除成功後重新獲取商品列表
+            } else {
+                console.error('刪除商品失敗');
+            }
+        })
+        .catch(error => console.error('錯誤:', error));
+        }
+    </script>
+   
+</body>
+</html>

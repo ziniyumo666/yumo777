@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品詳細資訊</title>
+</head>
+<body>
+    <h1>商品詳細資訊</h1>
+    <div id="productDetails"></div>
+
+    <script>
+        window.onload = function() {
+            // 從URL中獲取商品ID
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            // 從後端獲取商品詳細資訊
+            fetch(`/api/product/${productId}`)
+                .then(response => response.json())
+                .then(product => {
+                    // 動態生成HTML以顯示商品詳細資訊
+                    const productDetailsContainer = document.getElementById('productDetails');
+                    const productHTML = `
+                        <div>
+                            <img src="../uploads/${product.image}" alt="${product.name}" style="width: 20vw; height: 20vh;">
+                            <h2>${product.name}</h2>
+                            <p>規格：${product.price}</p>
+                            <p>用途/特性：${product.style}</p>
+                        </div>
+                    `;
+                    productDetailsContainer.innerHTML = productHTML;
+                })
+                .catch(error => console.error('錯誤:', error));
+        };
+    </script>
+</body>
+</html>
+

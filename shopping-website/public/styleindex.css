@@ -1,0 +1,139 @@
+/* *{
+    padding:0;
+    margin: 0;
+
+} */
+/* header nav{
+    background-color: #292020;
+    height:80px;
+    width:100%;
+    
+
+}
+nav button{
+    border:0;
+    background-color:#003C9D;
+    color:#fff;
+    
+    border:0.1vw solid #1f1a1a;
+}
+nav h1{
+    color:white;
+    position: absolute;
+    left:9vw;
+    top:0;
+    line-height: 11.5vh;
+} */
+.navbar-logo{
+    height:11vh;
+    position:relative;
+    left:40vw;
+    bottom:1.2vh;
+}
+.navbar-brand{
+    height:10vh;
+}
+.navbar{
+    
+    background-color: #0f3f6f;
+}
+li a{
+    color:white;
+    font-size:20px;
+    text-decoration: none;
+
+}
+li a:hover{
+    text-decoration: underline;
+}
+.navbar-toggler{
+    background-color: white;
+}
+a.navbar-brand{
+    color:white;
+    font-size:3vw;
+    position: relative;
+    top:0;
+    left:2vw;
+}
+/* styleindex.css */
+
+/* 搜索框样式 */
+#searchInput {
+    width: 15vw; /* 宽度设置为父容器的宽度 */
+    padding: 10px; /* 设置内边距 */
+    margin-bottom: 20px; /* 底部留出一些空间 */
+    font-size: 16px; /* 字体大小 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 5px; /* 边框圆角 */
+    position:relative;
+    left:10vw;
+
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 3vw  !important; /* 标题字体大小 */
+    margin-bottom: 20px; /* 底部留出一些空间 */
+    color: #333; /* 标题颜色 */
+    position:relative;
+    left:10vw;
+}
+.news{
+    position:absolute;
+    top:29vh;
+}
+.news a {
+    
+    
+    display: inline-block; /* 让超链接成为块级元素，以便设置固定宽度和高度 */
+    width: 8vw; /* 设置固定宽度 */
+    height: 7vh; /* 设置固定高度 */
+    text-align: center; /* 文本居中 */
+    line-height: 7vh; /* 行高与高度相同，以垂直居中文本 */
+    text-decoration: none;
+    color: black;
+    margin: 1vh;
+    border: 3px solid black; /* 设置边框为2像素宽度的黑色 */
+    border-radius: 3px; /* 设置边框圆角半径为5像素，以创建方形边框 */
+    background-color: lightblue; /* 设置背景颜色为浅蓝色 */
+}
+.news a:hover{
+    text-decoration: underline;
+}
+/* styleindex.css */
+
+/* 商品信息样式 */
+.product-item p {
+    margin: 0; /* 去除段落元素的默认边距 */
+    
+    line-height: 1.5; /* 设置行高 */
+}
+
+/* 商品名称样式 */
+.product-item p.product-name {
+    font-weight: bold; /* 设置为粗体 */
+    font-size:1.2vw;
+    color: #333; /* 设置颜色 */
+}
+
+/* 商品规格样式 */
+.product-item p.product-spec {
+    color: #666; /* 设置颜色 */
+}
+
+/* 商品用途/特性样式 */
+.product-item p.product-feature {
+    color: #888; /* 设置颜色 */
+}
+/* 设置商品规格和用途/特性不超过一行 */
+.product-spec,
+.product-feature {
+    overflow: hidden; /* 隐藏溢出内容 */
+    white-space: nowrap; /* 不换行 */
+    text-overflow: ellipsis; /* 文本溢出时显示省略号 */
+}
+body {
+    overflow-x: hidden; /* 隐藏水平方向上超出屏幕的内容 */
+    overflow-y: auto; /* 在垂直方向上允许滚动条或者可见内容 */
+}
