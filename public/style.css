@@ -1,0 +1,265 @@
+/* *{
+    padding:0;
+    margin: 0;
+
+} */
+/* header nav{
+    background-color: #292020;
+    height:80px;
+    width:100%;
+    
+
+}
+nav button{
+    border:0;
+    background-color:#003C9D;
+    color:#fff;
+    
+    border:0.1vw solid #1f1a1a;
+}
+nav h1{
+    color:white;
+    position: absolute;
+    left:9vw;
+    top:0;
+    line-height: 11.5vh;
+} */
+.navbar-logo{
+    height:11vh;
+    position:relative;
+    left:40vw;
+    bottom:1.2vh;
+}
+.navbar-brand{
+    height:10vh;
+}
+.navbar{
+    
+    background-color: #0f3f6f;
+}
+li a{
+    color:white;
+    font-size:20px;
+    text-decoration: none;
+
+}
+li a:hover{
+    text-decoration: underline;
+}
+.navbar-toggler{
+    background-color: white;
+}
+a.navbar-brand{
+    color:white;
+    font-size:3vw;
+    position: relative;
+    top:0;
+    left:2vw;
+}
+.news{
+    background-color:white;
+    color:white;
+    height:115vh;
+    
+    background-position:center;
+    background-size: 40%;
+    
+    /* height: 300px; */
+    /* position: absolute;
+    left:120px;
+    top:30px;
+    line-height: 230px;
+    width: 25%; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.special-heading{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    bottom:29vh;
+    right:21vw;
+    color:black !important;
+}
+.special-heading1{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    bottom:34vh;
+    left:13vw;
+    color:black;
+}
+.special-heading2{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:5vh;
+    right:21vw;
+    color:black;
+}
+.special-heading3{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:0vh;
+    left:13vw;
+    color:black;
+}
+.special-heading4{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top: 39vh;
+    right:22vw;
+    color:black;
+}
+.special-heading5{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:34vh;
+    left:13vw;
+    color:black;
+}
+.special-heading6{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:71vh;
+    right:22vw;
+    color:black;
+}
+.special-heading7{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:66vh;
+    left:13vw;
+    color:black;
+}
+.special-heading8{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:107vh;
+    right:22vw;
+    color:black;
+}
+.special-heading9{
+    font-size:2vw;
+    margin:0;
+    position: relative;
+    top:101vh;
+    left:12vw;
+    color:black;
+}
+.news p{
+    color:rgb(63, 49, 49);
+    font-size:1vw;
+    margin:10px 0;
+    position:relative;
+    bottom:32vh;
+}
+
+.news a {
+    position:relative;
+    top:54vh;
+    right: 39vw;
+    font-size: 2vw;
+    display: inline-block; /* 让超链接成为块级元素，以便设置固定宽度和高度 */
+    width: 14vw; /* 设置固定宽度 */
+    height: 8vh; /* 设置固定高度 */
+    text-align: center; /* 文本居中 */
+    line-height: 7vh; /* 行高与高度相同，以垂直居中文本 */
+    text-decoration: none;
+    color: black;
+    margin: 2vh;
+    border: 3px solid black; /* 设置边框为2像素宽度的黑色 */
+    border-radius: 3px; /* 设置边框圆角半径为5像素，以创建方形边框 */
+    background-color: lightblue; /* 设置背景颜色为浅蓝色 */
+}
+
+.imagesgroup{
+    position:relative;
+    top:58vh;
+    left:14.5vw;
+   
+}
+.imagesgroup1{
+    position:relative;
+    top:72vh;
+    left:14.5vw;
+    
+}
+.imagesgroup2{
+    position:relative;
+    top:86vh;
+    left:14.5vw;
+    
+}
+.imagesgroup3{
+    position:relative;
+    top:100vh;
+    left:14.5vw;
+    
+}
+.news a:hover{
+    text-decoration: underline;
+}
+footer{
+    background-color: #0f3f6f;
+    height:170vh;
+}
+.productclass a{
+    text-decoration: none;
+    color:white;
+}
+.productclass h2{
+    color:white;
+}
+.productclass h3{
+    color:white;
+}
+.productclass{
+    position:relative;
+    top:10vh;
+}
+.but p{
+    text-decoration: none;
+    color:white;
+}
+.but h2{
+    
+    color:white;
+}
+.but h3{
+    
+    color:white;
+}
+.productclass .navigation a{
+    position:relative;
+    right:0.5vw;
+}
+.productclass .navigation li{
+    list-style-type:circle;
+    color:white;
+    
+}
+body {
+    overflow-x: hidden; /* 隐藏水平方向上超出屏幕的内容 */
+    overflow-y: auto; /* 在垂直方向上允许滚动条或者可见内容 */
+}
+
+
+footer{
+    overflow-x: hidden; /* 隐藏水平方向上超出屏幕的内容 */
+    overflow-y: auto; /* 在垂直方向上允许滚动条或者可见内容 */
+    position: relative;
+    /* left:1vw; */
+}
